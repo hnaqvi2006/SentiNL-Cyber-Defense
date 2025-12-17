@@ -2,3 +2,4 @@ streamlit
 streamlit-lottie
 zxcvbn-python
 requests
+google-genai
