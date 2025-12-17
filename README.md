@@ -41,37 +41,30 @@ cd SentiNL-Cyber-Defense
 pip install -r requirements.txt
 export GOOGLE_API_KEY="your_api_key_here"
 streamlit run app.py
+```
 
-📁 Project Structure
+## 📁 Project Structure
 
-app.py — Main Streamlit application and UI logic
+- `app.py` — Main Streamlit application and UI logic
+- `scam_tool.py` — Scam and phishing analysis module
+- `pass_tool.py` — Password strength evaluation logic
+- `leak_tool.py` — Data exposure awareness module
+- `requirements.txt` — Project dependencies
 
-scam_tool.py — Scam and phishing analysis module
 
-pass_tool.py — Password strength evaluation logic
+## 🔒 Security & Privacy Notes
 
-leak_tool.py — Data exposure awareness module
+- API keys are not stored in the repository
+- Keys are injected via environment variables or Streamlit Secrets
+- No user input or credential data is persisted or logged
 
-requirements.txt — Project dependencies
+## 🔮 Future Improvements
 
-🔒 Security & Privacy Notes
+- MITRE ATT&CK technique mapping for detected threats
+- URL and domain reputation analysis
+- Threat intelligence feed integration
+- User authentication and profiles
 
-API keys are not stored in the repository
-
-Keys are injected via environment variables or Streamlit Secrets
-
-No user input or credential data is persisted or logged
-
-🔮 Future Improvements
-
-MITRE ATT&CK technique mapping for detected threats
-
-URL and domain reputation analysis
-
-Threat intelligence feed integration
-
-User authentication and profiles
-
-📌 Project Status
+## 📌 Project Status
 
 Live and deployed. Built as a hands-on cybersecurity + AI project demonstrating secure design, debugging, dependency management, and cloud deployment.
