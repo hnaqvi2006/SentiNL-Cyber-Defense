@@ -4,13 +4,17 @@ import os
 
 # --- SETUP AI CLIENT ---
 # Replace with your actual Gemini API Key
-api_key = "" 
+import os
+from google import genai
+
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 
 try:
-    client = genai.Client(api_key=api_key)
+    client = genai.Client(api_key=GOOGLE_API_KEY)
     AI_AVAILABLE = True
-except Exception as e:
+except Exception:
     AI_AVAILABLE = False
+
 
 def check_scam(text):
     """

@@ -1,18 +1,16 @@
 from zxcvbn import zxcvbn
-from google import genai
 import os
+from google import genai
 
-# --- SETUP AI CLIENT ---
-# Replace "YOUR_ACTUAL_KEY_HERE" with your real Gemini API Key.
-api_key = "" 
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 
 try:
-    # Initialize the client once
-    client = genai.Client(api_key="")
+    client = genai.Client(api_key=GOOGLE_API_KEY)
     AI_AVAILABLE = True
 except Exception as e:
-    print(f"⚠️ AI Config Error: {e}")
     AI_AVAILABLE = False
+
+assert GOOGLE_API_KEY is not None
 
 def test_password_strength(password):
     """

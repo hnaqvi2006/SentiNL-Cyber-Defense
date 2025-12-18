@@ -1,22 +1,10 @@
 import json
-import os
 import requests
+import os
 from google import genai
 
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 
-
-
-# --- CONFIGURATION ---
-# 1. GOOGLE GEMINI KEY (For AI Advice)
-# Replace with your actual key
-GOOGLE_API_KEY = "" 
-
-# 2. BREACH DIRECTORY API KEY (For Real Data)
-# Get this from RapidAPI: https://rapidapi.com/rohan-patra/api/breachdirectory
-# If you don't have one, leave it as "" and the app will use the local file.
-BREACH_DIRECTORY_KEY = "" 
-
-# --- SETUP AI CLIENT ---
 try:
     client = genai.Client(api_key=GOOGLE_API_KEY)
     AI_AVAILABLE = True
