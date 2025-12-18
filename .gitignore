@@ -1,5 +1,8 @@
 .DS_Store
 .streamlit/secrets.toml
 .env
+*.save
+__pycache__/
+
 
 

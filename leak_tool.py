@@ -4,6 +4,7 @@ import os
 from google import genai
 
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+BREACH_DIRECTORY_KEY = os.getenv("BREACH_DIRECTORY_KEY")
 
 try:
     client = genai.Client(api_key=GOOGLE_API_KEY)
