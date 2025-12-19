@@ -39,11 +39,11 @@ def load_lottieurl(url):
 lottie_radar = load_lottieurl("https://assets8.lottiefiles.com/packages/lf20_2LdXSt.json")
 lottie_alert = load_lottieurl("https://assets10.lottiefiles.com/packages/lf20_QpolL2.json")
 
-# Password Animation (replace lottie.host)
-lottie_password = load_lottieurl("https://assets7.lottiefiles.com/packages/lf20_7fCbvNSmFD.json")
+# Password Animation (lock / security vibe)
+lottie_password = load_lottieurl("https://assets8.lottiefiles.com/packages/lf20_bzgbsr6z.json")
 
-# Command Center Animation (already good)
-lottie_computer = load_lottieurl("https://assets7.lottiefiles.com/packages/lf20_7fCbvNSmFD.json")
+# Command Center Animation (computer / network vibe)
+lottie_computer = load_lottieurl("https://assets10.lottiefiles.com/packages/lf20_jcikwtux.json")
 
 # Custom CSS for Dark Mode / Hacker Vibe
 st.markdown("""
