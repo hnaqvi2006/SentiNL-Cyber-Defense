@@ -23,28 +23,26 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-def load_lottiefile(path: str):
-    with open(path, "r") as f:
-        return json.load(f)
 
-lottie_computer = load_lottiefile("animations/computer.json")
 
 # --- ASSETS & SETUP ---
 def load_lottieurl(url):
     try:
-        r = requests.get(url)
-        if r.status_code != 200: return None
+        r = requests.get(url, timeout=10, headers={"User-Agent": "Mozilla/5.0"})
+        if r.status_code != 200:
+            return None
         return r.json()
-    except: return None
+    except Exception:
+        return None
 
-# Lottie Animations (Web Assets)
+
 lottie_radar = load_lottieurl("https://assets8.lottiefiles.com/packages/lf20_2LdXSt.json")
 lottie_alert = load_lottieurl("https://assets10.lottiefiles.com/packages/lf20_QpolL2.json")
 
-# NEW: Password Animation
-lottie_password = load_lottieurl("https://lottie.host/b6b4f688-08e2-435e-bccc-51ac8ec98fdb/1O6vsONLre.json")
+# Password Animation (replace lottie.host)
+lottie_password = load_lottieurl("https://assets7.lottiefiles.com/packages/lf20_7fCbvNSmFD.json")
 
-# Command Center Animation
+# Command Center Animation (already good)
 lottie_computer = load_lottieurl("https://assets7.lottiefiles.com/packages/lf20_7fCbvNSmFD.json")
 
 # Custom CSS for Dark Mode / Hacker Vibe
