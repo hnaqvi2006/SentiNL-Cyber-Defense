@@ -121,7 +121,7 @@ if menu == "🏠 COMMAND CENTER":
     with col3:
         st.metric(label="AI Neural Link", value="ONLINE", delta="Active")
     
-    st.markdown("### 🌐 NETWORK TOPOLOGY")
+    st.markdown("### 🌐 OPERATIONAL OVERVIEW")
     
     # Computer Animation (URL Version)
     if lottie_computer:
