@@ -23,6 +23,12 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+def load_lottiefile(path: str):
+    with open(path, "r") as f:
+        return json.load(f)
+
+lottie_computer = load_lottiefile("animations/computer.json")
+
 # --- ASSETS & SETUP ---
 def load_lottieurl(url):
     try:
@@ -39,7 +45,7 @@ lottie_alert = load_lottieurl("https://assets10.lottiefiles.com/packages/lf20_Qp
 lottie_password = load_lottieurl("https://lottie.host/b6b4f688-08e2-435e-bccc-51ac8ec98fdb/1O6vsONLre.json")
 
 # Command Center Animation
-lottie_computer = load_lottieurl("https://lottie.host/1b40d8ac-8f04-4944-8b19-e8c94c6db4b0/WsubMMSCSb.json")
+lottie_computer = load_lottieurl("https://assets7.lottiefiles.com/packages/lf20_7fCbvNSmFD.json")
 
 # Custom CSS for Dark Mode / Hacker Vibe
 st.markdown("""
